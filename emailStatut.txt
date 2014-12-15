@@ -1,0 +1,15 @@
+Bonjour @@PRENOM@@ @@NOM@@,
+
+Le numéro de votre demande est : @@ID@@.
+
+Ce message vous est transmit automatiquement pour vous faire part que le statut de votre demande est maintenant : @@STATUT@@.
+
+Si votre demande est acceptée, vous pourrez acheter votre permis au bureau de stationnement du Service des Immeubles (SDI) au C-337.01 (3e étage pavillon Principal):
+	- Du lundi au vendredi de 09h00 à 16h00 à partir du 20 août 2013.
+
+Si votre demande est refusée, vous pouvez vous adresser au bureau de stationnement du Service des Immeubles (SDI) au C-337.01 (3e étage pavillon Principal) pour vous informer sur les autres types de permis disponibles (http://www.polymtl.ca/sdi/secteurs/stationn/).
+
+Il vous est possible de consulter l'état de votre demande à l'adresse http://www.stationnement.aep.polymtl.ca/statut.php.
+
+Si vous avez des questions, n'hésitez pas à téléphoner à l'AEP au (514) 340-4747 #0 ou à envoyer un courriel à stationnement@aep.polymtl.ca.
+

@@ -1,0 +1,8 @@
+Bonjour @@FIRSTNAME@@ @@LASTNAME@@,
+
+Un nouveau mot de passe a été demandé pour votre acompte. Voici votre nouveau mot de passe:
+@@PASSWORD@@
+
+Si vous n'avez pas fait de demande pour un nouveau mot de passe, n'hésitez pas à téléphoner à l'AEP au (514) 340-4747 #0 ou à envoyer un courriel à stationnement@aep.polymtl.ca.
+
+Bonne journée.

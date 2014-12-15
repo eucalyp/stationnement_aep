@@ -1,0 +1,9 @@
+Bonjour @@FIRSTNAME@@ @@LASTNAME@@, 
+
+Votre demande a maintenant le statut: @@STATUS@@. 
+
+@@DETAILS@@
+
+Si vous avez des questions, n'hésitez pas à téléphoner à l'AEP au (514) 340-4747 #0 ou envoyer un courrial à stationnement@aep.polymtl.ca.
+
+Bonne journée.

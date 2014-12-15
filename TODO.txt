@@ -1,0 +1,21 @@
+1. Changer le message du courriel
+2. Zone administrateur pour la gestion des demandes
+3. (moindre priorité) Créer une page où le user peut modifier ses infos personelles. 
+	8.1: Ajouter ou modifier le champ dans le sidebar pour inclure un lien vers cette page 
+	8.2: Rediriger vers cette page avec le boutton "Modifier" dans le form de demande
+4. Changer les méthodes de validation de champs (dans register et demande) pour celles de la classe validation.php. Vérifier les méthodes de validation
+5. GREEN-> S'arranger pour lier les éléments de st_car aux demandes (probablement pair une clé  {demandeId, carId} ou un trigger), comme ça, si une demande est deleté, les voitures associées seront deleté aussi
+
+6 ***MÉTA-IMPORTANT***: Il faudrait absolument pas que l'on ne puisse pas voir le répertoire du serveur. Tu dois savoir plus que moi comment s'arranger pour que les users aient pas accès, mais pour l'instant on peut voir les permis, preuves de résidence et autres de tous les autres utilisateurs 
+
+7. Intégrer script de distance
+8. Compléter méthodes pour annuler/réactiver une demande
+9. Message lors d'un changement ou d'un enregistrement successful d'une demande
+10. Ajouter option voiture hybride
+11. Permettre PDF ?
+
+Pour moi (gref)
+1. Création 2 chars (??) --> Restrictions de la BD, voir avec Green
+2. Faire un roolback sur les fichiers envoyés sur le serveur
+3. Pimp le UI de demande --> beles petites lignes pour les fichiers
+4. Confirmation (alert box) d'annulation de demande
