@@ -1,5 +1,4 @@
 <?php
-
 error_reporting(E_ALL);
 
 require_once("class.authentification.php");
@@ -19,10 +18,9 @@ $objLog  = log::instance();
 $objvalid= validation::instance();
 $objDemandeListe = new demandeListe();
 $objDemande = null;
- $fileFieldIndex = 0;
+$fileFieldIndex = 0;
 
 if($objAuth->estIdentifie()) {
-	
 	$matricule = $_SESSION['usager'];
 	
 	$submissionTarget = util::getParam($_POST,'submissionTarget');
@@ -100,11 +98,22 @@ if($objAuth->estIdentifie()) {
 						
 	print('</form>');
 
+    print('<fieldset >
+            <legend> <h3 class="warning">Note</h3> </legend>
+            <div style="display:block" >');
+
+    print('<p>Les noms de fichiers ne doivent pas contenir de caractères spéciaux (é, è, à, â, ê, ç, espace)</br>');
+    print('<b>Nom de fichier incorrect</b>: permis de résidence.jpg</br>');
+    print('<b>Nom de fichier correct</b>: permis_de_residence.jpg</p>');
+    print("<b>Le permis de conduire doit être recto-verso</b> en un unique document. Vous pouvez utiliser
+        l'outils suivant pour joindre deux images en une: <a href='http://www.photojoiner.net/' target='_blank'>http://www.photojoiner.net/</a>");
+    print('</div></fieldset>');
+
 	// DEMANDE
 	//////////////////////////
 	print('<form method="post" action="" name="demande" enctype="multipart/form-data">
 			<input type="hidden" name="submissionTarget" value="demande"/>');	
-		
+
 	print('<fieldset >
 			<legend> <h3>Demande de stationnement</h3> </legend>
 			<div style="display:block" >');

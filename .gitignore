@@ -3,3 +3,5 @@ st2013_test/
 backup_28_10_2013/
 *.ignore
 proofs/
+class.config.php
+sessions/
