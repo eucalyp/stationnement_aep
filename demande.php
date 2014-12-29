@@ -102,10 +102,10 @@ if($objAuth->estIdentifie()) {
     <fieldset>
         <legend> <h3 class'warning'>Note</h3> </legend>
         <div style='display:block' >
-            <p>Les noms de fichiers ne doivent pas contenir de caractères sp&eacuteciaux (&eacute, è, à, â, ê, ç, espace)</br>
+            <p>Les noms de fichiers ne doivent pas contenir de caract&egraveres sp&eacuteciaux (&eacute, &egrave, &agrave, &acirc, &ecirc, &ccedil, espace)</br>
             <b>Nom de fichier incorrect</b>: permis de r&eacutesidence.jpg</br>
             <b>Nom de fichier correct</b>: permis_de_residence.jpg</p>
-            <b>Le permis de conduire doit être recto-verso</b> en un unique document. Vous pouvez utiliser l'outils suivant pour joindre deux images en une: <a href='http://www.photojoiner.net/' target='_blank'>http://www.photojoiner.net/</a>
+            <b>Le permis de conduire doit &ecirctre recto-verso</b> en un unique document. Vous pouvez utiliser l'outils suivant pour joindre deux images en une: <a href='http://www.photojoiner.net/' target='_blank'>http://www.photojoiner.net/</a>
         </div>
     </fieldset>
     "));
@@ -129,7 +129,7 @@ if($objAuth->estIdentifie()) {
 	
 	createCheckBoxField(demande::CARPOOLING_OTHERS_FORM_FIELD, 
 						$demande->isCarpoolingOthers(), 
-						'Je serais interesse à trouver des personnes pour faire du covoiturage');
+						'Je serais interesse &agrave trouver des personnes pour faire du covoiturage');
 					
     printn('<label class="formFieldFileLabel">Note concernant votre demande (optionnel) :</label><textarea name="'.demande::DETAILS_FORM_FIELD.'" style="max-width:65%" cols="40" rows="7">'.$demande->getDetails().'</textarea><br/>');
 
@@ -357,10 +357,10 @@ function createDemandField($fieldText, $value, $type, $fieldName, $maxLength, $i
             if (config::SendEmail) 
             {
             	 mail($demande->getEmail(),"Demande de stationnement (".$demande->getId().") : changement de statut",$email, $headers);
-            	$retour .= "<font color=\"#00cc00\"><b>Email envoy&eacute avec succ&eagraves concernant le statut! <br></b></font>\n";
+            	$retour .= "<font color=\"#00cc00\"><b>Email envoy&eacute avec succ&egraves concernant le statut! <br></b></font>\n";
         	}
         
-        $retour .= "<font color=\"#00cc00\"><b>Sauvegarde effectu&eacutee avec succ&eagraves! <br></b></font>\n";
+        $retour .= "<font color=\"#00cc00\"><b>Sauvegarde effectu&eacutee avec succ&egraves! <br></b></font>\n";
     }
     
     return $retour;
@@ -413,7 +413,7 @@ function printSelect($type, $valeur, $errorMessage = "")
         if ($valeur == DEMANDE_TYPE_COMPTANT) {$selected='selected';} else {$selected='';}
         $retour .= '<option value="'.DEMANDE_TYPE_COMPTANT.'" '.$selected.'>Comptant</option>'."\n";
         if ($valeur == DEMANDE_TYPE_CHEQUE) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_TYPE_CHEQUE.'" '.$selected.'>Chèque</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_TYPE_CHEQUE.'" '.$selected.'>Ch&egraveque</option>'."\n";
         if ($valeur == DEMANDE_TYPE_MANDAT) {$selected='selected';} else {$selected='';}
         $retour .= '<option value="'.DEMANDE_TYPE_MANDAT.'" '.$selected.'>Mandat poste</option>'."\n";
         if ($valeur == DEMANDE_TYPE_INTERAC) {$selected='selected';} else {$selected='';}
@@ -499,7 +499,7 @@ function printLecture($type, $valeur)
     {
         if ($valeur == DEMANDE_STATUS_ATTENTE)
         {
-            return "Demande reçue, en attente...  Pièces justificatives NON-REÇUES";
+            return "Demande re&ccedilue, en attente...  Pi&egraveces justificatives NON-REÇUES";
         }
         if ($valeur == DEMANDE_STATUS_REFUSE)
         {
@@ -515,7 +515,7 @@ function printLecture($type, $valeur)
         }
         if ($valeur == DEMANDE_STATUS_PREUVEOK)
         {
-            return "Demande reçue, en attente...  Pièces justificatives REÇUES";
+            return "Demande re&ccedilue, en attente...  Pi&egraveces justificatives REÇUES";
         }
         if ($valeur == DEMANDE_STATUS_ANNULE)
         {
