@@ -70,7 +70,7 @@ if($objAuth->estIdentifie()) {
     print(createStatusForm($demande->getStatus()));
 
     if(!util::isWebsiteOpen()) {
-        print("<h3>LES DEMANDES SONT PRESENTEMMENT FERMES - Vous serez avisé par courriel lorsque la période de demande ouvrira. Bonne journée.<h3>");
+        print("<h3>LES DEMANDES SONT PRESENTEMMENT FERMES - Vous serez avis&eacute par courriel lorsque la p&eacuteriode de demande ouvrira. Bonne journ&eacutee.<h3>");
     }
 	// INFORMATIONS PERSONELLES
 	//////////////////////////
@@ -102,8 +102,8 @@ if($objAuth->estIdentifie()) {
     <fieldset>
         <legend> <h3 class'warning'>Note</h3> </legend>
         <div style='display:block' >
-            <p>Les noms de fichiers ne doivent pas contenir de caractères spéciaux (é, è, à, â, ê, ç, espace)</br>
-            <b>Nom de fichier incorrect</b>: permis de résidence.jpg</br>
+            <p>Les noms de fichiers ne doivent pas contenir de caractères sp&eacuteciaux (&eacute, è, à, â, ê, ç, espace)</br>
+            <b>Nom de fichier incorrect</b>: permis de r&eacutesidence.jpg</br>
             <b>Nom de fichier correct</b>: permis_de_residence.jpg</p>
             <b>Le permis de conduire doit être recto-verso</b> en un unique document. Vous pouvez utiliser l'outils suivant pour joindre deux images en une: <a href='http://www.photojoiner.net/' target='_blank'>http://www.photojoiner.net/</a>
         </div>
@@ -124,7 +124,7 @@ if($objAuth->estIdentifie()) {
 	
 	createCheckBoxField(demande::CARPOOLING_FORM_FIELD, 
 						$demande->isCarpooling(), 
-						"Je prevois faire du covoiturage (si oui, indiquer le nom, prénom et matricule des personnes 
+						"Je prevois faire du covoiturage (si oui, indiquer le nom, pr&eacutenom et matricule des personnes 
 						avec qui vous prevoyez covoiturer dans les notes concernant votre demande");
 	
 	createCheckBoxField(demande::CARPOOLING_OTHERS_FORM_FIELD, 
@@ -143,7 +143,7 @@ if($objAuth->estIdentifie()) {
 								$demande->getLicenseErrorMessage(), 
 								$demande->getLicense()));
 								
-    print(createDemandFileField('Preuve de résidence',
+    print(createDemandFileField('Preuve de r&eacutesidence',
     							'(nom de fichier alphanum&eacuterique [a-z][0-9] sans espace)', 
     							'', 
     							'file', 
@@ -366,7 +366,7 @@ function createDemandField($fieldText, $value, $type, $fieldName, $maxLength, $i
     return $retour;
 }
 /*****************************************************************************
-    Le script suivant permet de récupérer la distance et le temps de trajet entre une information suffisament précise pour géolocaliser  
+    Le script suivant permet de r&eacutecup&eacuterer la distance et le temps de trajet entre une information suffisament pr&eacutecise pour g&eacuteolocaliser  
  */
 
 function getParam($param)
@@ -387,7 +387,7 @@ function printn ($txt) { print $txt."\n"; }
 
 
 // Retourne le tag <select> selon le $type.
-// La $valeur sera sélectionnée.
+// La $valeur sera s&eacutelectionn&eacutee.
 function printSelect($type, $valeur, $errorMessage = "")
 {
     if ($type == 'limiteNb' || $type == 'statusRecherche' || $type=demande::PAYMENT_METHOD_FORM_FIELD)
@@ -428,17 +428,17 @@ function printSelect($type, $valeur, $errorMessage = "")
         if ($valeur == DEMANDE_STATUS_ATTENTE) {$selected='selected';} else {$selected='';}
         $retour .= '<option value="'.DEMANDE_STATUS_ATTENTE.'" '.$selected.'>En attente</option>'."\n";
         if ($valeur == DEMANDE_STATUS_PREUVEOK) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_PREUVEOK.'" '.$selected.'>Preuves acceptées</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_PREUVEOK.'" '.$selected.'>Preuves accept&eacutees</option>'."\n";
         if ($valeur == DEMANDE_STATUS_ACCEPTE) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_ACCEPTE.'" '.$selected.'>Acceptée</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_ACCEPTE.'" '.$selected.'>Accept&eacutee</option>'."\n";
         if ($valeur == DEMANDE_STATUS_IMPRIME) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_IMPRIME.'" '.$selected.'>Imprimée</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_IMPRIME.'" '.$selected.'>Imprim&eacutee</option>'."\n";
         if ($valeur == DEMANDE_STATUS_PAYE) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_PAYE.'" '.$selected.'>Payée</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_PAYE.'" '.$selected.'>Pay&eacutee</option>'."\n";
         if ($valeur == DEMANDE_STATUS_REFUSE) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_REFUSE.'" '.$selected.'>Refusée</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_REFUSE.'" '.$selected.'>Refus&eacutee</option>'."\n";
         if ($valeur == DEMANDE_STATUS_ANNULE) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_ANNULE.'" '.$selected.'>Annulée</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_ANNULE.'" '.$selected.'>Annul&eacutee</option>'."\n";
     }
     elseif ($type == 'statusRecherche')
     {
@@ -447,17 +447,17 @@ function printSelect($type, $valeur, $errorMessage = "")
         if ($valeur == DEMANDE_STATUS_ATTENTE) {$selected='selected';} else {$selected='';}
         $retour .= '<option value="'.DEMANDE_STATUS_ATTENTE.'" '.$selected.'>En attente</option>'."\n";
         if ($valeur == DEMANDE_STATUS_PREUVEOK) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_PREUVEOK.'" '.$selected.'>Preuves acceptées</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_PREUVEOK.'" '.$selected.'>Preuves accept&eacutees</option>'."\n";
         if ($valeur == DEMANDE_STATUS_ACCEPTE) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_ACCEPTE.'" '.$selected.'>Acceptée</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_ACCEPTE.'" '.$selected.'>Accept&eacutee</option>'."\n";
         if ($valeur == DEMANDE_STATUS_IMPRIME) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_IMPRIME.'" '.$selected.'>Imprimée</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_IMPRIME.'" '.$selected.'>Imprim&eacutee</option>'."\n";
         if ($valeur == DEMANDE_STATUS_PAYE) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_PAYE.'" '.$selected.'>Payée</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_PAYE.'" '.$selected.'>Pay&eacutee</option>'."\n";
         if ($valeur == DEMANDE_STATUS_REFUSE) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_REFUSE.'" '.$selected.'>Refusée</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_REFUSE.'" '.$selected.'>Refus&eacutee</option>'."\n";
         if ($valeur == DEMANDE_STATUS_ANNULE) {$selected='selected';} else {$selected='';}
-        $retour .= '<option value="'.DEMANDE_STATUS_ANNULE.'" '.$selected.'>Annulée</option>'."\n";
+        $retour .= '<option value="'.DEMANDE_STATUS_ANNULE.'" '.$selected.'>Annul&eacutee</option>'."\n";
     }
     elseif ($type == 'categoriePermis')
     {
@@ -503,15 +503,15 @@ function printLecture($type, $valeur)
         }
         if ($valeur == DEMANDE_STATUS_REFUSE)
         {
-            return "Demande refusée";
+            return "Demande refus&eacutee";
         }
         if ($valeur == DEMANDE_STATUS_ACCEPTE)
         {
-            return "Demande acceptée";
+            return "Demande accept&eacutee";
         }
         if ($valeur == DEMANDE_STATUS_PAYE)
         {
-            return "Demande payée";
+            return "Demande pay&eacutee";
         }
         if ($valeur == DEMANDE_STATUS_PREUVEOK)
         {
@@ -519,11 +519,11 @@ function printLecture($type, $valeur)
         }
         if ($valeur == DEMANDE_STATUS_ANNULE)
         {
-            return "Demande annulée";
+            return "Demande annul&eacutee";
         }
         if ($valeur == DEMANDE_STATUS_IMPRIME)
         {
-            return "Demande acceptée et transférée au SDI";
+            return "Demande accept&eacutee et transf&eacuter&eacutee au SDI";
         }
     }
 }
