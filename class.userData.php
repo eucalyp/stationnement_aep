@@ -30,7 +30,7 @@ class userData
 	const EMAIL_TAG = "Adresse courriel";
 	const FIRST_NAME_TAG = "Prénom";
 	const LAST_NAME_TAG = "Nom";
-	const PHONE_TAG = "Numéro de téléphone";
+	const PHONE_TAG = "Num&eacutero de t&eacutel&eacutephone";
 	const ADDRESS_TAG = "Adresse";
 	const CITY_TAG = "Ville";
 	const ZIP_CODE_TAG = "Code postal";
