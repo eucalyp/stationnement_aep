@@ -18,6 +18,10 @@ body {
 
 }
 
+h3.warning {
+	color: red;
+}
+
 #adminDemandWrapper,
 #wrapper {
 	background-color: #f8f8f8;
