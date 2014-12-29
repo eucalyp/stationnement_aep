@@ -98,18 +98,18 @@ if($objAuth->estIdentifie()) {
 						
 	print('</form>');
 
-    ?>
-    <fieldset >
-        <legend> <h3 class="warning">Note</h3> </legend>
-        <div style="display:block" >
+    util::UTF8toISO8859(print("
+    <fieldset>
+        <legend> <h3 class'warning'>Note</h3> </legend>
+        <div style='display:block' >
             <p>Les noms de fichiers ne doivent pas contenir de caractères spéciaux (é, è, à, â, ê, ç, espace)</br>
             <b>Nom de fichier incorrect</b>: permis de résidence.jpg</br>
             <b>Nom de fichier correct</b>: permis_de_residence.jpg</p>
             <b>Le permis de conduire doit être recto-verso</b> en un unique document. Vous pouvez utiliser l'outils suivant pour joindre deux images en une: <a href='http://www.photojoiner.net/' target='_blank'>http://www.photojoiner.net/</a>
         </div>
     </fieldset>
+    "));
 
-    <?php
 
 	// DEMANDE
 	//////////////////////////
