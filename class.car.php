@@ -29,10 +29,10 @@ class car
 
 	const MODEL_TAG = "Marque";	
 	const COLOR_TAG = "Couleur";
-	const YEAR_TAG = "Année";
+	const YEAR_TAG = "Ann&eacutee";
 	const LICENSE_TAG = "Preuve plaque immatriculation";
 	const INSURANCE_TAG = "Preuve d'assurance";
-	const ELECTRIC_TAG = "Voiture hybride ou électrique branchable";
+	const ELECTRIC_TAG = "Voiture hybride ou &eacutelectrique branchable";
 	const OPTIONNAL_CAR_INDEX = 2;
     
     const INSURANCE_DIRECTORY = "proofs/insurance/";    
