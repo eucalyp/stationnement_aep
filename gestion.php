@@ -48,7 +48,7 @@ require_once('class.authentification.php');
 <div style="height:25px">
     <a style="color:orange;padding-left:30px;float:left" href="?toggle=1"><?php print(util::isWebsiteOpen() ? "Fermer les inscriptions" : "Ouvrir les inscriptions")?></a>
     <a style="color:orange;padding-left:30px;float:left;" href="javascript:deleteOldRequests()">Supprimer les anciennes demandes</a>
-    <a style="color:orange;padding-right:30px;float:right" href="logout.php">Déconnexion</a>
+    <a style="color:orange;padding-right:30px;float:right" href="logout.php">D&eacuteconnexion</a>
 	</div>		
 		<div id="main">
 			<div id="adminDemandWrapper">	
@@ -60,7 +60,7 @@ require_once('class.authentification.php');
 				<div id="proofSectionWrapper"  >
 					<div id="proofSectionContainer">
 						<span id="initialMessage" style="opacity: 0.5; text-align:center; vertical-align: middle" >
-							<label style="vertical-align:middle; font-size:22">Choisissez une demande pour débuter</label>
+							<label style="vertical-align:middle; font-size:22">Choisissez une demande pour d&eacutebuter</label>
 						</span>	
 					</div>	
 				</div>
@@ -102,16 +102,16 @@ define('ELETRIC_CAR_FILTER',   'electricCar');
 				<div id="filters">');
 				  		createStatusFilterButton('Tout', ALL_FILTER, demandsStatistics::getOverallDemandCount(), -1);
 					    createStatusFilterButton('Attente', WAITING_FILTER, demandsStatistics::getWaitingDemandsCount(), demandStatus::WAITING_STATUS);
-						createStatusFilterButton('Preuves vérifiées', VALID_PROOF_FILTER, demandsStatistics::getValidatedInfosDemandsCount(), demandStatus::PROOF_OK_STATUS);
-						createStatusFilterButton('Refusé', REFUSED_FILTER, demandsStatistics::getRefusedDemandsCount(), demandStatus::REFUSED_STATUS);
-						createStatusFilterButton('Accepté', ACCEPTED_FILTER, demandsStatistics::getAcceptedDemandsCount(), demandStatus::ACCEPTED_STATUS);
-						createStatusFilterButton('Payé', PAID_FILTER, demandsStatistics::getPaidDemandsCount(), demandStatus::PAID_STATUS);
-						createStatusFilterButton('Imprimé', PRINTED_FILTER, demandsStatistics::getPrintedDemandsCount(), demandStatus::PRINTED_STATUS);
+						createStatusFilterButton('Preuves v&eacuterifi&eacutees', VALID_PROOF_FILTER, demandsStatistics::getValidatedInfosDemandsCount(), demandStatus::PROOF_OK_STATUS);
+						createStatusFilterButton('Refus&eacute', REFUSED_FILTER, demandsStatistics::getRefusedDemandsCount(), demandStatus::REFUSED_STATUS);
+						createStatusFilterButton('Accept&eacute', ACCEPTED_FILTER, demandsStatistics::getAcceptedDemandsCount(), demandStatus::ACCEPTED_STATUS);
+						createStatusFilterButton('Pay&eacute', PAID_FILTER, demandsStatistics::getPaidDemandsCount(), demandStatus::PAID_STATUS);
+						createStatusFilterButton('Imprim&eacute', PRINTED_FILTER, demandsStatistics::getPrintedDemandsCount(), demandStatus::PRINTED_STATUS);
 						createStatusFilterButton('Preuves invalides', INVALID_PROOF_FILTER, demandsStatistics::getInvalidInfosDemandsCount(), demandStatus::INVALID_PROOF_STATUS);
-						createStatusFilterButton('Annulé', CANCELED_FILTER, demandsStatistics::getCanceledDemandsCount(), demandStatus::CANCELED_STATUS);
+						createStatusFilterButton('Annul&eacute', CANCELED_FILTER, demandsStatistics::getCanceledDemandsCount(), demandStatus::CANCELED_STATUS);
 						createStatusFilterButton('Covoiturage', CARPOOLING_FILTER, demandsStatistics::getCarpoolingDemandsCount(), 'carpooling');
 						createStatusFilterButton('Covoiturage (autres)', CARPOOLING_OTHERS_FILTER, demandsStatistics::getCarpoolingOthersDemandsCount(), 'carpoolingOthers');
-						createStatusFilterButton('Voiture électrique', ELETRIC_CAR_FILTER, demandsStatistics::getElectricalCarDemandsCount(), ELETRIC_CAR_FILTER);
+						createStatusFilterButton('Voiture &eacutelectrique', ELETRIC_CAR_FILTER, demandsStatistics::getElectricalCarDemandsCount(), ELETRIC_CAR_FILTER);
 									
 	print('		</div>
 			</span>');
@@ -151,13 +151,13 @@ var currentProofImage;
 var selectedRowsGlobal = {};
 
 // Ceate grid
-var statusSearchCategories = ":Tous;Attente:Attente;Preuves:Preuves validées;Refus:Refus;Acceptée:Acceptée;Payée:Payée;Imprimée:Imprimée;Preuves invalides:Preuves invalides;Annulée:Annulée";
+var statusSearchCategories = ":Tous;Attente:Attente;Preuves:Preuves valid&eacutees;Refus:Refus;Accept&eacutee:Accept&eacutee;Pay&eacutee:Pay&eacutee;Imprim&eacutee:Imprim&eacutee;Preuves invalides:Preuves invalides;Annul&eacutee:Annul&eacutee";
 var notesSearchCategories = ":Tous;Oui:Oui;Non:Non";
 jQuery("#datagrid").jqGrid({
    	url:"gridDataLoader.php",
     datatype: "json",
     mtype: "GET",
-    colNames:['Matricule', 'Status', 'Date de création', 'Distance (km)', 'Notes'],
+    colNames:['Matricule', 'Status', 'Date de cr&eacuteation', 'Distance (km)', 'Notes'],
     colModel:
     [
 		{name:'matricule',index:'matricule', width:80,editable:false, sorttype:'integer'},
